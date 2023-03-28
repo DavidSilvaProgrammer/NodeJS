@@ -33,7 +33,7 @@ que o servidor está sendo iniciado com sucesso.
 node server.js
 
 Por fim, para rodar e testar o código é criado um arquivo chamado
-"server.js". Assim, é possível acessar o servidor na porta 300 em
+"server.js". Assim, é possível acessar o servidor na porta 3000 em
 qualquer navegador. Basta digitar http://localhost:3000/ para ver
 a mensagem "Olá, Mundo!".
 
