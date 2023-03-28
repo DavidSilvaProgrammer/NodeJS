@@ -1,0 +1,15 @@
+A palavra-chave que deve ser usada para importar uma biblioteca no Node.js é require. A sintaxe básica para importar uma 
+biblioteca no Node.js é:
+
+const nomeDaBiblioteca = require('nome-da-biblioteca');
+
+Aqui, nomeDaBiblioteca é uma variável que receberá a referência 
+à biblioteca importada e nome-da-biblioteca é o nome da biblioteca 
+que está sendo importada, como por exemplo express, lodash, axios, 
+entre outras.
+
+A função require() é uma função nativa do Node.js que permite 
+importar módulos e bibliotecas externas em um projeto Node.js. 
+É importante observar que a função require() busca a biblioteca 
+no diretório node_modules do projeto e retorna o objeto exportado 
+pela biblioteca para ser usado no código.
