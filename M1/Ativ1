@@ -17,3 +17,42 @@ arquivo correspondente, que pode incluir o arquivo de imagem ou vídeo solicitad
 usa esses arquivos de mídia para exibir as imagens e vídeos na página da web. É importante ter em mente
 que, como cada recurso é uma solicitação HTTP separada, o carregamento de uma página da Web pode
 pode ser atrasado se houver muitas funções ou se forem grandes.
+
+Cria um diretório
+
+mkdir projeto_novo
+cd meu_projeto
+
+Comando npm que serve como um assistente de configuração 
+para a criação do arquivo "package.json".
+
+npm init
+
+Instalando o pacote lodash com o npm. O pacote Lodash é uma biblioteca
+da JavaScript que fornece várias funções ao projeto, como manipulação
+de arrays, objetos e outras estruturas.
+
+Cria um arquivo JavaScript
+
+touch index.js
+
+Importando biblioteca Lodash e utilizando a função chunk para
+dividir uma array em partes iguais e exibir o resultado por
+meio do objeto console e do método log.
+
+const _ = require('lodash');
+
+console.log(_.chunk(['a', 'b', 'c', 'd'], 2));
+
+Executando o arquivo index.js no Node.js
+
+node index.js
+
+
+
+
+
+
+
+
+
