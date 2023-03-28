@@ -1,5 +1,40 @@
-Sem usar bibliotecas, crie um projeto simples em Node.js que seja capaz de responder requisições HTTP.
+/**Sem usar bibliotecas, crie um projeto simples em Node.js que seja capaz de responder requisições HTTP.
 Explique como rodar e testar.
 
 Realize essa atividade no WORD ou no Bloco de Notas, suba esse arquivo para algum repositório e compartilhe 
-o link no campo ao lado para que outros desenvolvedores possam analisá-lo. 
+o link no campo ao lado para que outros desenvolvedores possam analisá-lo. **/
+
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Olá, Mundo!\n');
+});
+
+server.listen(3000, () => {
+  console.log('Servidor rodando em http://localhost:3000/');
+});
+
+/**
+
+Primeiro foi importado o módulo http.
+Após isso, foi criado um servidor HTTP usando a função "createServer()"
+Essa função possui uma função inclusa chamada callback que é utilizada 
+para responder requisições dos clientes.
+Por conseguinte, é definida a resposta que o servidor deve enviar ao cliente.
+O status de resposta foi estabelecido como 200 para sinalizar ok,
+ou seja, que está disponível ao cliente, o tipo de conteúdo está definido
+como "text/plain" e o conteúdo da resposta é o tradicional "Ola, Mundo\n".
+Por sua vez, é utilizado o método listen(), que intercepta a porta em que
+o servidor deve receber requisições e a mensagem da função callback de
+que o servidor está sendo iniciado com sucesso.
+
+node server.js
+
+Por fim, para rodar e testar o código é criado um arquivo chamado
+"server.js". Assim, é possível acessar o servidor na porta 300 em
+qualquer navegador. Basta digitar http://localhost:3000/ para ver
+a mensagem "Olá, Mundo!".
+
+
