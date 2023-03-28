@@ -3,3 +3,17 @@ Crie o começo de um projeto em node.js, usando o npm e informe os comandos util
 
 Realize essa atividade no WORD ou no Bloco de Notas, suba esse arquivo para algum repositório e 
 compartilhe o link no campo ao lado para que outros desenvolvedores possam analisá-lo. */
+
+Quando um usuário digita um URL em um navegador da Web e pressiona "enter", o navegador envia uma 
+solicitação HTTP (Hypertext Transfer Protocol) ao servidor para esse URL. O servidor responde com 
+uma mensagem HTTP contendo os dados necessários para renderizar a página da Web solicitada no 
+navegador. Esses dados podem incluir código HTML, CSS, JavaScript, imagens e outros tipos de 
+conteúdo de mídia. O navegador usa esses dados para criar a página da Web e exibi-la ao usuário.
+
+No entanto, quando um usuário acessa uma página da web que contém imagens e vídeos, o navegador
+envia uma solicitação HTTP separada para cada recurso (como imagens e vídeos) necessário para
+renderizar a página inteira. O servidor responde a cada solicitação HTTP com o conteúdo
+arquivo correspondente, que pode incluir o arquivo de imagem ou vídeo solicitado. Então o navegador
+usa esses arquivos de mídia para exibir as imagens e vídeos na página da web. É importante ter em mente
+que, como cada recurso é uma solicitação HTTP separada, o carregamento de uma página da Web pode
+pode ser atrasado se houver muitas funções ou se forem grandes.
