@@ -28,4 +28,16 @@ app.list(porta,()=>{console.log("Servidor rodando na porta 8080")})
 
 /*As bibliotecas servem para abstrair informações do HTTP para o Node.js */
 
+app.get('/book',(req,res)=>{
+    res.send(livros);
+})
+
+app.post('/book',(req,res)=>{
+    const.livro=req.body;
+    //printando o livro que foi inserido
+    console.log(livro);
+    //adicionando no array de livros
+    livros.push(livro);
+    res.send('O livro foi inserido com sucesso!')
+})
 
