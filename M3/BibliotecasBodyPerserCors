@@ -66,3 +66,20 @@ Rodar o comando node index.js
 Digitar a url no navegador:
 http://localhost:8080/books
 
+
+
+Para cadastrar um novo livro
+
+Abrir a Postman e criar uma requisição do tipo POST
+http://localhost:3000/books
+
+No body da requisição, devemos enviar as informações
+do nosso livro como sendo um JSON
+
+Exemplo:
+
+"title": "Great Expectations",
+"author": "Charles Dickens"
+
+
+
