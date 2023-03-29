@@ -10,3 +10,11 @@ app.put('/',(req,res)=>{
 app.delete('/',(req,res)=>{
     return res.send('Recebi um HTTP DELETE');
 });
+
+/*
+Não é possível usar o navegador para testar requisições desse tipo,
+mas existem ferramentas como Insomnia e Postman que fazem isso.
+
+Testa a rota ou url e o tipo de requisição.
+
+*/
