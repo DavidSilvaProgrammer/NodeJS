@@ -60,3 +60,9 @@ app.post('/book',(req,res)=>{
     res.send('O livro foi inserido com sucesso!')
 })
 
+/*Para rodarmos nosso projeto:
+Abrir o terminal na pasta do projeto
+Rodar o comando node index.js
+Digitar a url no navegador:
+http://localhost:8080/books
+
