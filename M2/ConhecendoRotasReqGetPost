@@ -27,10 +27,24 @@ retornar um valor específico através do id. Para isso, usamos
 o placeholder req.params para pegar o valor informado na rota. 
 Mas, como utilizamos o id, colocamos req.params.id. 
 
+Identifica o Id e atribui e retorna valor
+da variável Id.
+
 const express=require('express')
 const app=express()
 app.get('/usuarios:id',function(req,res){
     const id=req.params.id
     res.send(`id recebido ${id}`)
 })
+
+
+
+
+Aplicações de rotas
+
+Para testar as rotas, só é preciso colocar a URL e um método HTTP 
+para o programa mostrar o retorno. Assim, é possível testar suas 
+rotas e saber que métodos estão falhando. Veja o exemplo de criação 
+de um usuário:
+
 
