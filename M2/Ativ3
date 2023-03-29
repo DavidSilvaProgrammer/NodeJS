@@ -4,3 +4,32 @@ alterne entre essas formas usando placeholders e query.
 
 Trabalhe esse código em seu IDE, suba ele para sua conta no GitHub e compartilhe o link desse projeto no 
 campo ao lado para que outros desenvolvedores possam analisá-lo. */
+
+
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Esta é a Home Page');
+});
+
+app.get('/nome/:nome', (req, res) => {
+  res.send(`Olá ${req.params.nome}!`);
+});
+
+app.get('/query', (req, res) => {
+  const nome = req.query.nome;
+  if (nome) {
+    res.send(`Bem-vindo, ${nome}`);
+  } else {
+    res.send('Por favor, forneça um nome');
+  }
+});
+
+app.get('/redireciona', (req, res) => {
+  res.redirect('/');
+});
+
+app.listen(8080, () => {
+  console.log('SERVIDOR RODANDO');
+});
