@@ -26,4 +26,6 @@ app.get('/book',(req,res)=>{
 app.list(porta,()=>{console.log("Servidor rodando na porta 8080")})
 
 
+/*As bibliotecas servem para abstrair informações do HTTP para o Node.js */
+
 
