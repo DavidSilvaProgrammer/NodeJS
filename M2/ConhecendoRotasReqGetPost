@@ -21,3 +21,16 @@ app.all('/usuarios',function(req,res){
     res.send('usuarios')
     next();
 })
+
+Além de retornar todos os valores de uma só vez, há como 
+retornar um valor específico através do id. Para isso, usamos 
+o placeholder req.params para pegar o valor informado na rota. 
+Mas, como utilizamos o id, colocamos req.params.id. 
+
+const express=require('express')
+const app=express()
+app.get('/usuarios:id',function(req,res){
+    const id=req.params.id
+    res.send(`id recebido ${id}`)
+})
+
