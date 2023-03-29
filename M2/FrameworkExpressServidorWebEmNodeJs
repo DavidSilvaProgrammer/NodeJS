@@ -11,11 +11,11 @@ app.listen(8080, () => {
   console.log("Servidor escutando na porta 8080");
 });
 
-/**
+/*
 Nesse código, estamos criando um servidor web usando o framework Express em Node.js. Definimos uma rota 
 para o caminho raiz ('/'), que retorna uma mensagem simples de "Olá express" quando acessada pelo método GET. 
 Em seguida, usamos o método listen() para iniciar o servidor na porta 8080 e imprimimos uma mensagem no 
 console para indicar que o servidor está em execução.
-**/
+*/
 
  servidor web usando o framework Express em Node.js.
