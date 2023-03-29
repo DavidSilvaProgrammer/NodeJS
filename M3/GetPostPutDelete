@@ -1,0 +1,12 @@
+app.get('/'(req,res)=>{
+    return res.send('Recebi um HTTP GET');
+});
+app.post('/',(req,res)=>{
+    return res.send('Recebi um HTTP POST');
+});
+app.put('/',(req,res)=>{
+    return res.send('Recebi um HTTP PUT');
+});
+app.delete('/',(req,res)=>{
+    return res.send('Recebi um HTTP DELETE');
+});
