@@ -11,3 +11,13 @@ app.get('/usuarios',function(req,res){
 app.post('/usuarios',function(req,res){
     res.send('callback post')
 })
+
+/* 
+
+Outra opção é utilizar o app.all(). Com ele, podemos pegar todos os 
+tipos de requisições de uma só vez. Veja o código:
+
+app.all('/usuarios',function(req,res){
+    res.send('usuarios')
+    next();
+})
