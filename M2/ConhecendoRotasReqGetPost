@@ -47,4 +47,36 @@ para o programa mostrar o retorno. Assim, é possível testar suas
 rotas e saber que métodos estão falhando. Veja o exemplo de criação 
 de um usuário:
 
+Mas como podemos deixar essas URL mais dinâmicas? Através de uma query.
+
+ 
+
+
+Query
+
+Durante o processo de desenvolvimento, você pode utilizar o postman 
+como no exemplo anterior para testar as rotas da nossa API
+
+
+
+Assim, configuramos a query na nossa URL de pesquisa. Por exemplo, 
+você tem a rota /listar para buscar todos os usuários e quer criar 
+um filtro para listar apenas os da página 1, mas com o tamanho 
+da página 20. Para isso, utilizamos a query: 
+
+/listar?page=1&pageSize=20
+
+Percebe-se que colocamos um ponto de interrogação depois da rota e 
+algumas variáveis são declaradas. Portanto, a sintaxe é: 
+
+    variável = valor;
+
+    “&” separa as variáveis.
+
+Ou seja, com essas informações, sabemos que page tem valor igual a 
+1 e o pageSize é 20.
+
+A query é utilizada para realizar consultas.
+
+
 
