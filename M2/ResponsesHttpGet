@@ -1,0 +1,146 @@
+app.get('/init',(req,res)=>{
+    rest.send('Ola,Mundo!')
+})
+
+
+/*No Express, res é a abreviação de resposta. 
+Esse objeto é usado para enviar dados do servidor 
+para o lado do cliente por meio de requisições HTTP. 
+
+O método .send() serve para encaminhar qualquer dado 
+transmitido como argumento para o lado do cliente. 
+
+ Como é possível ver no código 1, esse método pode 
+ receber strings, arrays ou um objeto como argumento.
+ 
+ 
+
+Ainda sobre a imagem, observe que a requisição GET recebe um 
+callback com as variáveis req e res como argumentos.
+
+Podemos usar o objeto res dentro da solicitação GET para enviar 
+a string ‘Olá Mundo!’ ao lado do cliente.
+
+O método .send() também define seus próprios cabeçalhos 
+integrados nativamente, mas depende do content-type e do 
+content-length dos dados.
+
+
+
+O objeto res também pode ser usado para especificar códigos 
+de status HTTP com o método .status(). Vejamos o exemplo do seu 
+uso a seguir.
+
+Para enviar outras informações para o lado do cliente, 
+é possível encadear diferentes métodos com o .send().
+
+app.get('/Iniciar',(req,res)=>{
+    res.status(404).send('Caminho não encontrado');
+});
+
+O método .status()está definindo o código
+staus para HTTP 404.
+
+404 informa que os dados solicitados 
+não foram encontrados.
+
+Status
+
+Uma outra opção para enviar uma resposta com status 
+é usar o método .sendStatus(), uma abreviação para adaptar 
+a funcionalidade do .status() e do .send(): “res.sendStatus(404);”.  
+Veja no exemplo a seguir.
+
+app.get('/Iniciar',function(req,res){
+    res.sendStatus(404);
+});
+
+
+Assim, os códigos de status HTTP resumem a resposta do seu 
+servidor Express e os usuários contam com eles para se manter 
+informados da existência de dados especificados ou de um erro 
+interno do servidor.
+
+
+
+O método .append() é usado para definir cabeçalhos na resposta do servidor.
+
+ 
+
+Assim, na chamada para o método .append(), o cabeçalho deve ser usado como o primeiro argumento e um valor como o segundo.  
+
+ Headers
+
+Em uma mesma linha de código, esse método aceita cabeçalhos 
+padrões e não padrões na resposta do servidor.
+
+Cabeçalhos são úteis quando estamos trabalhando a autenticação, 
+por exemplo. Veja o código.
+
+app.get('/login',(req,res)=>{
+    res.append('Content-Type','application/javascript;charset=UTF-8');
+    res.append('Connection','keep-alive')
+    res.append('Set-Cookie','divehours=fornoghtly')
+    res.append('Content-Lenght','123356');
+});
+
+Conhecendo outros métodos
+
+
+
+Para finalizar, vamos ver alguns outros métodos não 
+muito utilizados, mas bastante úteis. 
+
+O  método .redirect() redireciona o cliente para 
+uma página diferente. Por exemplo, quando o usuário insere 
+as suas credenciais de login em um site, esse método facilita 
+a mudança para a sua página de acesso.
+
+app.get('/login'(req,res)=>{
+    res.redirect('/paginas/login')
+});
+
+app.get('/jogar',(req,res)=>{
+    res.render('jogo.html',{status:'good'});
+});
+
+
+
+Já o método .render() aceita um arquivo HTML como argumento e o 
+envia para o cliente.
+
+Esse método também aceita um segundo argumento opcional, 
+um objeto locals, que possui propriedades customizadas para 
+definir o arquivo enviado ao lado do cliente. 
+
+app.get('/login',(req,res)=>{
+    res.redirect('/paginas/login')
+});
+app.get('/jogar',(req,res)=>{
+    res.render('jogo.html',{status:'good'});
+});
+
+
+
+
+Antes de iniciar o projeto, precisamos instalar as bibliotecas:
+
+ 
+
+Npm install express
+
+Npm install nodemon
+
+Npm install ejs --save
+
+ 
+A biblioteca nodemon serve para reiniciar automaticamente o 
+servidor. Já a biblioteca EJS serve para transportar os dados 
+do back-end para o front-end. Observe o vídeo a seguir.
+
+
+
+
+ 
+ 
+*/
