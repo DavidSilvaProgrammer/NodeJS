@@ -1,0 +1,13 @@
+/* Temos dois callbacks: um para a requisição HTTP GET na rota 
+/usuarios e outro para a requisição HTTP POST da mesma rota. 
+Em Ambos passamos o app para utilizar os métodos HTTP. */
+
+const express = require('express')
+const app = express()
+
+app.get('/usuarios',function(req,res){
+    res.send('callback')
+})
+app.post('/usuarios',function(req,res){
+    res.send('callback post')
+})
