@@ -1,0 +1,79 @@
+Código Node.js com Express.js que permite listar jogadores de futebol utilizando os métodos HTTP GET e POST.
+
+    Crie um novo diretório para o projeto e navegue até ele pelo terminal.
+
+    Inicialize um novo projeto Node.js e instale o Express.js utilizando o comando npm init e npm install express.
+
+    Crie um arquivo index.js e abra-o em um editor de texto.
+
+    Importe o módulo Express.js e crie uma instância do servidor utilizando a função express().
+
+    Crie um array com objetos que representem jogadores de futebol. Cada objeto deve ter um nome, um clube e uma posição.
+
+Por exemplo:
+
+const jogadores = [
+  { nome: 'Neymar Jr.', clube: 'Paris Saint-Germain', posicao: 'atacante' },
+  { nome: 'Lionel Messi', clube: 'Paris Saint-Germain', posicao: 'atacante' },
+  { nome: 'Cristiano Ronaldo', clube: 'Manchester United', posicao: 'atacante' }
+];
+
+Crie uma rota HTTP GET que retorne a lista de jogadores utilizando 
+a função app.get(). Dentro da função de callback, utilize o método 
+res.json() para enviar a lista de jogadores como uma resposta 
+no formato JSON. Por exemplo:
+
+// Rota HTTP GET para listar jogadores
+app.get('/jogadores', (req, res) => {
+  res.json(jogadores);
+});
+
+Crie uma rota HTTP POST que permita criar um novo jogador 
+utilizando a função app.post(). Dentro da função de callback, 
+utilize o método req.body para obter os dados do jogador a 
+partir do corpo da requisição. Em seguida, adicione o novo 
+jogador ao array jogadores e envie uma resposta indicando que 
+o jogador foi criado com sucesso.
+
+Por exemplo:
+
+// Rota HTTP POST para criar um novo jogador
+app.post('/jogadores', (req, res) => {
+  const novoJogador = req.body;
+  jogadores.push(novoJogador);
+  res.send('Jogador criado com sucesso');
+});
+
+Para que o Express.js possa interpretar o corpo da requisição 
+como JSON, é necessário utilizar o middleware express.json(). 
+Adicione esta linha antes das definições de rotas.
+
+Por exemplo:
+app.use(express.json());
+
+Inicie o servidor na porta 8080 utilizando o método app.listen().
+Por exemplo:
+
+// Inicia o servidor na porta 8080
+app.listen(8080, () => {
+  console.log('Servidor rodando na porta 8080');
+});
+
+    Salve o arquivo index.js.
+
+    No terminal, navegue até o diretório do projeto 
+    e execute o comando node index.js.
+
+    Acesse a aplicação no navegador ou utilizando uma ferramenta de 
+    teste de API, como o Postman ou o Insomnia, digitando 
+    http://localhost:8080/jogadores. Para criar um novo jogador, 
+    envie uma requisição HTTP POST para 
+    http://localhost:8080/jogadores com um objeto JSON contendo 
+    o nome, o clube e a posição do novo jogador no corpo 
+    da requisição.
+
+
+
+
+
+
