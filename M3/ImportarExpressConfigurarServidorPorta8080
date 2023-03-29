@@ -1,0 +1,14 @@
+/*
+Importar a bibliotca express e configurar o servidor para
+rodar na porta 8080
+*/
+
+const express=require('express')
+const app=express()
+
+app.get('/'(req,res)=>{
+    res.send("Olá express");
+});
+app.listen(8080,()=>{
+    console.log("Servidor escutando na porta 8080")
+});
