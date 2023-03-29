@@ -1,0 +1,32 @@
+Existem outras formas de inserir comentários em JavaScript, além do uso da sintaxe // 
+para comentários de uma única linha. Abaixo estão algumas outras formas de inserir comentários em JavaScript:
+
+Comentários de uma única linha com //:
+
+// Isso é um comentário de uma única linha
+
+Comentários de várias linhas com /* */:
+
+/*
+  Isso é um comentário
+  de várias linhas
+*/
+
+Comentários de documentação com /** */:
+
+/**
+ * Isso é um comentário de documentação
+ * para a função somar().
+ *
+ * @param {number} a O primeiro número para somar
+ * @param {number} b O segundo número para somar
+ * @returns {number} A soma de a e b
+ */
+function somar(a, b) {
+  return a + b;
+}
+
+Os comentários de documentação (também conhecidos como JSDoc) são usados para documentar funções, métodos e classes. 
+Eles geralmente seguem um formato específico que inclui descrição, parâmetros e tipo de retorno. 
+Eles podem ser lidos por ferramentas de documentação, como o JSDoc, para gerar documentação automatizada do código.
+Independentemente da forma escolhida, o uso de comentários ajuda a melhorar a legibilidade e a manutenção do código.
