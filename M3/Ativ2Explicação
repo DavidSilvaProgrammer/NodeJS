@@ -1,0 +1,97 @@
+const express = require('express');
+const app = express();
+
+app.get('/listar/:status', (req, res) => {
+  const { status } = req.params;
+  
+  switch (status) {
+    case '10':
+      res.status(200).send('Status HTTP 200 - Requisição bem sucedida.');
+      break;
+    case '20':
+      res.status(201).send('Status HTTP 201 - A requisição foi bem sucedida e um novo recurso foi criado como resultado.');
+      break;
+    case '30':
+      res.status(204).send('Status HTTP 204 - A requisição foi bem sucedida, mas não há nenhum conteúdo a ser retornado.');
+      break;
+    case '40':
+      res.status(400).send('Status HTTP 400 - A requisição é inválida ou não pode ser atendida.');
+      break;
+    case '50':
+      res.status(404).send('Status HTTP 404 - O servidor não pôde encontrar o recurso solicitado.');
+      break;
+    case '60':
+      res.status(500).send('Status HTTP 500 - O servidor encontrou um erro inesperado que impediu que ele atendesse a requisição.');
+      break;
+    default:
+      res.status(400).send('Parâmetro inválido. Use um dos códigos de status HTTP suportados.');
+      break;
+  }
+});
+
+app.listen(8080, () => {
+  console.log('Servidor rodando na porta 8080');
+});
+
+/*
+Neste exemplo, a rota /listar/:status é definida para lidar com as solicitações GET que incluem 
+um parâmetro :status. Quando esta rota é acessada com um status HTTP válido como parâmetro, o 
+servidor envia uma resposta HTTP com o status correspondente e uma mensagem de texto correspondente. 
+Se o parâmetro não for um dos valores esperados, a resposta com um código de status 400 é enviada.
+
+O servidor é iniciado na porta 8080 usando o método listen(). Quando o servidor é iniciado com sucesso, 
+ele imprime a mensagem "Servidor rodando na porta 8080" no console.
+
+Exemplos por partes do código:
+
+const express = require('express');
+const app = express();
+
+Essas duas linhas de código importam a biblioteca express e criam uma instância do aplicativo express, 
+que é a base do servidor. O objeto app é usado para definir as rotas e os manipuladores de rota para a nossa aplicação.
+
+app.get('/listar/:status', (req, res) => {
+  const { status } = req.params;
+  
+  switch (status) {
+    case '10':
+      res.status(200).send('Status HTTP 200 - Requisição bem sucedida.');
+      break;
+    case '20':
+      res.status(201).send('Status HTTP 201 - A requisição foi bem sucedida e um novo recurso foi criado como resultado.');
+      break;
+    case '30':
+      res.status(204).send('Status HTTP 204 - A requisição foi bem sucedida, mas não há nenhum conteúdo a ser retornado.');
+      break;
+    case '40':
+      res.status(400).send('Status HTTP 400 - A requisição é inválida ou não pode ser atendida.');
+      break;
+    case '50':
+      res.status(404).send('Status HTTP 404 - O servidor não pôde encontrar o recurso solicitado.');
+      break;
+    case '60':
+      res.status(500).send('Status HTTP 500 - O servidor encontrou um erro inesperado que impediu que ele atendesse a requisição.');
+      break;
+    default:
+      res.status(400).send('Parâmetro inválido. Use um dos códigos de status HTTP suportados.');
+      break;
+  }
+});
+
+Essa parte do código define uma rota para a nossa aplicação usando o método get() do objeto app. A rota é definida como /listar/:status, onde :status é um parâmetro variável que pode ser passado na URL.
+
+Quando a rota é acionada, a função de retorno de chamada é executada. Neste caso, usamos uma função de seta que recebe os objetos req e res como argumentos. O objeto req contém informações sobre a solicitação recebida, enquanto o objeto res é usado para enviar uma resposta de volta ao cliente.
+
+Dentro da função de retorno de chamada, usamos o objeto req para obter o valor do parâmetro :status usando req.params.status. 
+Em seguida, usamos um switch para verificar o valor do parâmetro e definir o status HTTP correspondente e a mensagem de resposta 
+apropriada. Se o valor do parâmetro 
+
+app.listen(8080, () => {
+  console.log('Servidor rodando na porta 8080');
+});
+
+Esta última linha inicia o servidor express ouvindo na porta 8080. Quando o servidor é iniciado com sucesso, 
+o console exibe a mensagem "Servidor rodando na porta 8080". O servidor está pronto para lidar 
+com solicitações HTTP para a rota definida. não corresponder a nenhum dos casos do switch, enviamos uma resposta 
+com um código de status 400 indicando que o parâmetro é inválido.
+
